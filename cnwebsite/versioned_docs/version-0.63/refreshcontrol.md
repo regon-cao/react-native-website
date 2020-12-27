@@ -1,10 +1,7 @@
 ---
-id: version-0.63-refreshcontrol
+id: refreshcontrol
 title: RefreshControl
-original_id: refreshcontrol
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 这一组件可以用在 ScrollView 或 FlatList 内部，为其添加下拉刷新的功能。当 ScrollView 处于竖直方向的起点位置（scrollY: 0），此时下拉会触发一个`onRefresh`事件。
 
@@ -171,3 +168,7 @@ export default App;
 | 类型               | 必填 | 平台 |
 | ------------------ | ---- | ---- |
 | [color](colors.md) | 否   | iOS  |
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

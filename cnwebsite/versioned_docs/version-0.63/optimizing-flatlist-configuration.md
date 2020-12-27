@@ -1,10 +1,7 @@
 ---
-id: version-0.63-optimizing-flatlist-configuration
+id: optimizing-flatlist-configuration
 title: 列表配置优化
-original_id: optimizing-flatlist-configuration
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 ## 术语定义
 
@@ -26,7 +23,7 @@ Here are a list of props that can help to improve `FlatList` performance:
 
 ### removeClippedSubviews
 
-| Type    | Default |
+| 类型    | Default |
 | ------- | ------- |
 | Boolean | False   |
 
@@ -38,7 +35,7 @@ If `true`, views that are outside of the viewport are detached from the native v
 
 ### maxToRenderPerBatch
 
-| Type   | Default |
+| 类型   | Default |
 | ------ | ------- |
 | Number | 10      |
 
@@ -50,7 +47,7 @@ It is a `VirtualizedList` prop that can be passed through `FlatList`. This contr
 
 ### updateCellsBatchingPeriod
 
-| Type   | Default |
+| 类型   | Default |
 | ------ | ------- |
 | Number | 50      |
 
@@ -62,7 +59,7 @@ While `maxToRenderPerBatch` tells the amount of items rendered per batch, settin
 
 ### initialNumToRender
 
-| Type   | Default |
+| 类型   | Default |
 | ------ | ------- |
 | Number | 10      |
 
@@ -74,7 +71,7 @@ The initial amount of items to render.
 
 ### windowSize
 
-| Type   | Default |
+| 类型   | Default |
 | ------ | ------- |
 | Number | 21      |
 
@@ -140,3 +137,7 @@ render(){
   // ...
 }
 ```
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(96.40%), [sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(3.60%)

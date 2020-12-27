@@ -1,10 +1,7 @@
 ---
-id: version-0.63-pixelratio
+id: pixelratio
 title: PixelRatio
-original_id: pixelratio
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 `PixelRatio` 可以获取到设备的像素密度和字体缩放比。
 
@@ -32,7 +29,7 @@ const image = getImage({
 
 在 React Native 中，所有 JS 中的东西，包括布局引擎，都使用任意精度的数值。我们只在主线程最后设置原生组件的位置和坐标的时候才去做对齐工作。而且，对齐是相对于屏幕进行的，而非相对于父元素进行，进一步避免近似误差的累积。
 
-## Example
+## 示例
 
 ```SnackPlayer name=PixelRatio%20Example
 import React from "react";
@@ -164,3 +161,7 @@ static roundToNearestPixel(layoutSize)
 ```
 
 Rounds a layout size (dp) to the nearest layout size that corresponds to an integer number of pixels. For example, on a device with a PixelRatio of 3, `PixelRatio.roundToNearestPixel(8.4) = 8.33`, which corresponds to exactly (8.33 \* 3) = 25 pixels.
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(98.16%), [sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(1.84%)

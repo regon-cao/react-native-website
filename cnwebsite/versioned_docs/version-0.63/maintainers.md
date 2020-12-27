@@ -1,10 +1,7 @@
 ---
-id: version-0.63-maintainers
+id: maintainers
 title: What to Expect from Maintainers
-original_id: maintainers
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 So you have read through the [contributor's guide](contributing.md) and you're getting ready to send your first pull request. Perhaps you've found an issue in React Native and want to work with the maintainers to land a fix. Here's what you can expect to happen when you open an issue or send a pull request.
 
@@ -159,3 +156,7 @@ If a contributor becomes hostile or disrespectful, they will be referred to the 
 ## Facebook GitHub Bot
 
 The Facebook GitHub Bot was used to allow members of the community to perform administrative actions such as labeling and closing issues. The bot is no longer necessary, as maintainers will be granted the necessary permissions to manage issues. If you are interested in maintaining the repo, please reach out to Héctor Ramos (@hramos) on GitHub.
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

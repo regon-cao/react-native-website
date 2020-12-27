@@ -1,10 +1,7 @@
 ---
-id: version-0.63-components-and-apis
+id: components-and-apis
 title: 核心组件和API
-original_id: components-and-apis
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 React Native 提供了一些内置的[核心组件](intro-react-native-components)供你使用。你可以在网站的左侧看到组件的完整列表。如果你不知道从哪看起，那么可以先看一下下面这个简单的分类：
 
@@ -138,10 +135,6 @@ React Native 提供了一些内置的[核心组件](intro-react-native-component
     <p>易于使用和维护的动画库，可生成流畅而强大的动画。</p>
   </div>
   <div class="component">
-    <h3><a href="cameraroll">CameraRoll</a></h3>
-    <p>访问本地相册。</p>
-  </div>
-  <div class="component">
     <h3><a href="dimensions">Dimensions</a></h3>
     <p>获取设备尺寸。</p>
   </div>
@@ -174,3 +167,7 @@ React Native 提供了一些内置的[核心组件](intro-react-native-component
     <p>在原生视图中显示Web内容的组件。</p>
   </div>
 </div>
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

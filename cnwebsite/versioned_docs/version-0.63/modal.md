@@ -1,27 +1,16 @@
 ---
-id: version-0.63-modal
+id: modal
 title: Modal
-original_id: modal
 ---
 
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(99.71%), [hqwlkj](https://github.com/search?q=hqwlkj%40outlook.com&type=Users)(0.29%)
+import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; import constants from '@site/core/TabsConstants';
 
 Modal 组件是一种简单的覆盖在其他视图之上显示内容的方式。
 
 ## 示例
 
-<div class="toggler">
-  <ul role="tablist" class="toggle-syntax">
-    <li id="functional" class="button-functional" aria-selected="false" role="tab" tabindex="0" aria-controls="functionaltab" onclick="displayTabs('syntax', 'functional')">
-      函数组件示例
-    </li>
-    <li id="classical" class="button-classical" aria-selected="false" role="tab" tabindex="0" aria-controls="classicaltab" onclick="displayTabs('syntax', 'classical')">
-      Class组件示例
-    </li>
-  </ul>
-</div>
-
-<block class="functional syntax" />
+<Tabs groupId="syntax" defaultValue={constants.defaultSyntax} values={constants.syntax}>
+<TabItem value="functional">
 
 ```SnackPlayer name=Modal&supportedPlatforms=android,ios
 import React, { useState } from "react";
@@ -44,6 +33,7 @@ const App = () => {
         visible={modalVisible}
         onRequestClose={() => {
           Alert.alert("Modal has been closed.");
+          setModalVisible(!modalVisible);
         }}
       >
         <View style={styles.centeredView}>
@@ -116,7 +106,8 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-<block class="classical syntax" />
+</TabItem>
+<TabItem value="classical">
 
 ```SnackPlayer name=Modal&supportedPlatforms=android,ios
 import React, { Component } from "react";
@@ -148,6 +139,7 @@ class App extends Component {
           visible={modalVisible}
           onRequestClose={() => {
             Alert.alert("Modal has been closed.");
+            this.setModalVisible(!modalVisible);
           }}
         >
           <View style={styles.centeredView}>
@@ -221,7 +213,8 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-<block class="endBlock syntax" />
+</TabItem>
+</Tabs>
 
 ---
 
@@ -350,3 +343,7 @@ The `statusBarTranslucent` prop determines whether your modal should go under th
 | 类型                                                           | 必填 | 平台 |
 | -------------------------------------------------------------- | ---- | ---- |
 | enum('fullScreen', 'pageSheet', 'formSheet', 'overFullScreen') | 否   | iOS  |
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(95.07%), [sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(4.64%), [hqwlkj](https://github.com/search?q=hqwlkj&type=Users)(0.29%)

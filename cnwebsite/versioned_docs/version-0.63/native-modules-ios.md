@@ -1,10 +1,7 @@
 ---
-id: version-0.63-native-modules-ios
-title: 原生模块
-original_id: native-modules-ios
+id: native-modules-ios
+title: iOS 原生模块
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(99.81%), [xiaoqiangli.mail](https://github.com/search?q=xiaoqiangli.mail%40gmail.com&type=Users)(0.19%)
 
 有时候 App 需要访问平台 API，但 React Native 可能还没有相应的模块封装；或者你需要复用 Objective-C、Swift 或 C++代码，而不是用 JavaScript 重新实现一遍；又或者你需要实现某些高性能、多线程的代码，譬如图片处理、数据库、或者各种高级扩展等等。
 
@@ -68,12 +65,9 @@ RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location)
 现在从 Javascript 里可以这样调用这个方法：
 
 ```jsx
-import { NativeModules } from 'react-native';
+import { NativeModules } from "react-native";
 const CalendarManager = NativeModules.CalendarManager;
-CalendarManager.addEvent(
-  'Birthday Party',
-  '4 Privet Drive, Surrey'
-);
+CalendarManager.addEvent("Birthday Party", "4 Privet Drive, Surrey");
 ```
 
 > **NOTE**: JavaScript method names
@@ -132,8 +126,8 @@ RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location date:(
 
 ```jsx
 CalendarManager.addEvent(
-  'Birthday Party',
-  '4 Privet Drive, Surrey',
+  "Birthday Party",
+  "4 Privet Drive, Surrey",
   date.getTime()
 ); // 把日期以unix时间戳形式传递
 ```
@@ -142,8 +136,8 @@ CalendarManager.addEvent(
 
 ```jsx
 CalendarManager.addEvent(
-  'Birthday Party',
-  '4 Privet Drive, Surrey',
+  "Birthday Party",
+  "4 Privet Drive, Surrey",
   date.toISOString()
 ); // 把日期以ISO-8601的字符串形式传递
 ```
@@ -166,10 +160,10 @@ RCT_EXPORT_METHOD(addEvent:(NSString *)name details:(NSDictionary *)details)
 然后在 JS 里这样调用：
 
 ```jsx
-CalendarManager.addEvent('Birthday Party', {
-  location: '4 Privet Drive, Surrey',
+CalendarManager.addEvent("Birthday Party", {
+  location: "4 Privet Drive, Surrey",
   time: date.getTime(),
-  description: '...'
+  description: "...",
 });
 ```
 
@@ -528,3 +522,7 @@ RCT_EXTERN_METHOD(addEvent:(NSString *)name location:(NSString *)location date:(
 ### invalidate()
 
 Native modules can conform to the [RCTInvalidating](https://github.com/facebook/react-native/blob/aa0ef15335fe27c0c193e3e968789886d82e82ed/React/Base/RCTInvalidating.h) protocol on iOS by implementing the `invalidate` method. This method [can be invoked](https://github.com/facebook/react-native/blob/18e3303cd46a72668caae46e28c7c6ae69fbf8f8/ReactCommon/turbomodule/core/platform/ios/RCTTurboModuleManager.mm#L456) when the native bridge is invalidated (ie: on devmode reload). You should avoid implementing this method in general, as this mechanism exists for backwards compatibility and may be removed in the future.
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(97.15%), [sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(2.66%), [xiaoqiangli.mail](https://github.com/search?q=xiaoqiangli.mail&type=Users)(0.19%)

@@ -1,10 +1,7 @@
 ---
-id: version-0.63-using-a-listview
+id: using-a-listview
 title: 使用长列表
-original_id: using-a-listview
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 React Native 提供了几个适用于展示长列表数据的组件，一般而言我们会选用[FlatList](flatlist.md)或是[SectionList](sectionlist.md)。
 
@@ -104,3 +101,7 @@ export default SectionListBasics;
 ```
 
 列表的一个常用场景就是从服务器端取回列表数据然后显示，要实现这一过程，你可能还需要学习[React Native 的网络相关用法](network.md).
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

@@ -1,10 +1,7 @@
 ---
-id: version-0.63-native-modules-setup
+id: native-modules-setup
 title: 原生模块配置
-original_id: native-modules-setup
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 Native modules are usually distributed as npm packages, except that on top of the usual Javascript they will include some native code per platform. To understand more about npm packages you may find [this guide](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) useful.
 
@@ -32,3 +29,7 @@ yarn example ios
 When all steps above are done, you will be able to continue with [Android Native Modules](native-modules-android) or [iOS Native Modules](native-modules-ios) guides to add in some code.
 
 > For a less opinionated setup, have a look at the third party tool [create-react-native-module](https://github.com/brodybits/create-react-native-module).
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

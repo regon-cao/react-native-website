@@ -1,10 +1,7 @@
 ---
-id: version-0.63-webview
+id: webview
 title: WebView
-original_id: webview
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(97.47%), [yahoo.007](https://github.com/search?q=yahoo.007%40163.com&type=Users)(2.53%)
 
 > **Warning** Please use the [react-native-community/react-native-webview](https://github.com/react-native-community/react-native-webview) fork of this component instead. To reduce the surface area of React Native, `<WebView/>` is going to be removed from the React Native core. For more information, please read [The Slimmening proposal](https://github.com/react-native-community/discussions-and-proposals/issues/6).
 
@@ -118,9 +115,9 @@ Boolean that sets whether JavaScript running in the context of a file scheme URL
 
 Boolean that sets whether the `WebView` has access to the file system. The default value is `false`.
 
-| Type | Required | Platform |
-| ---- | -------- | -------- |
-| bool | No       | Android  |
+| 类型 | Required | 平台    |
+| ---- | -------- | ------- |
+| bool | No       | Android |
 
 ---
 
@@ -320,7 +317,7 @@ On iOS, when [`useWebKit=true`](webview.md#usewebkit), this prop will not work.
 
 ### `originWhitelist`
 
-List of origin strings to allow being navigated to. The strings allow wildcards and get matched against _just_ the origin (not the full URL). If the user taps to navigate to a new page but the new page is not in this whitelist, the URL will be handled by the OS. The default whitelisted origins are "http://*" and "https://*".
+List of origin strings to allow being navigated to. The strings allow wildcards and get matched against _just_ the origin (not the full URL). If the user taps to navigate to a new page but the new page is not in this whitelist, the URL will be handled by the OS. The default whitelisted origins are "http://_" and "https://_".
 
 | 类型             | 必填 |
 | ---------------- | ---- |
@@ -555,3 +552,7 @@ stopLoading();
 停止载入当前页面。
 
 [1]: https://github.com/facebook/react-native/commit/da9a712a9e17942dcd05b8d955f0764c2026a4ad
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(96.75%), [yahoo.007](https://github.com/search?q=yahoo.007&type=Users)(2.53%), [sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(0.72%)

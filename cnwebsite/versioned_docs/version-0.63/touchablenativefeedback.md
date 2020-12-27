@@ -1,10 +1,7 @@
 ---
-id: version-0.63-touchablenativefeedback
+id: touchablenativefeedback
 title: TouchableNativeFeedback
-original_id: touchablenativefeedback
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 > If you're looking for a more extensive and future-proof way to handle touch-based input, check out the [Pressable](pressable.md) API.
 
@@ -14,7 +11,7 @@ original_id: touchablenativefeedback
 
 原生触摸操作反馈的背景可以使用`background`属性来自定义。
 
-## Example
+## 示例
 
 ```SnackPlayer name=TouchableNativeFeedback%20Android%20Component%20Example&supportedPlatforms=android
 import React, { useState } from "react";
@@ -134,3 +131,7 @@ static Ripple(color: string, borderless: boolean, rippleRadius: ?number)
 ```jsx
 static canUseNativeForeground()
 ```
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(92.48%), [sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(7.52%)

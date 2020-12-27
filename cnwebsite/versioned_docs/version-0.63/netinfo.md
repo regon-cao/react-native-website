@@ -1,10 +1,7 @@
 ---
-id: version-0.63-netinfo
+id: netinfo
 title: NetInfo
-original_id: netinfo
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 > **已过时。** Use [react-native-community/react-native-netinfo](https://github.com/react-native-community/react-native-netinfo) instead.
 
@@ -167,3 +164,7 @@ NetInfo.isConnected.addEventListener(
   handleFirstConnectivityChange
 );
 ```
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

@@ -1,10 +1,7 @@
 ---
-id: version-0.63-interactionmanager
+id: interactionmanager
 title: InteractionManager
-original_id: interactionmanager
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 Interactionmanager 可以将一些耗时较长的工作安排到所有互动或动画完成之后再进行。这样可以保证 JavaScript 动画的流畅运行。
 
@@ -235,3 +232,7 @@ static setDeadline(deadline)
 ## 属性
 
 ---
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

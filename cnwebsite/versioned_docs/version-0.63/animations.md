@@ -1,10 +1,9 @@
 ---
-id: version-0.63-animations
+id: animations
 title: 动画
-original_id: animations
 ---
 
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
+import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; import constants from '@site/core/TabsConstants';
 
 流畅、有意义的动画对于移动应用用户体验来说是非常重要的。现实生活中的物体在开始移动和停下来的时候都具有一定的惯性，我们在界面中也可以使用动画来实现契合物理规律的交互。
 
@@ -67,9 +66,9 @@ export default () => {
 
 动画拥有非常灵活的配置项。自定义的或预定义的 easing 函数、延迟、持续时间、衰减系数、弹性常数等都可以在对应类型的动画中进行配置。
 
-`Animated`提供了多种动画类型，其中最常用的要属[`Animated.timing()`](animated#timing). It supports animating a value over time using one of various predefined easing functions, or you can use your own. Easing functions are typically used in animation to convey gradual acceleration and deceleration of objects.
+`Animated`提供了多种动画类型，其中最常用的要属[`Animated.timing()`](animated#timing)。它可以使用一些预设的`easing`曲线函数来控制动画值的变化速度，也支持自定义的曲线函数。动画中通常使用`easing`曲线函数来控制物体的加速或减速变化。
 
-By default, `timing` will use a easeInOut curve that conveys gradual acceleration to full speed and concludes by gradually decelerating to a stop. You can specify a different easing function by passing a `easing` parameter. Custom `duration` or even a `delay` before the animation starts is also supported.
+默认情况下`timing`使用`easeInOut`曲线，它使动画体逐渐加速到最大然后逐渐减速到停止。你可以通过传递`easing`参数来指定不同的变化速度，还支持自定义`duration`持续时间，甚至是动画开始前的`delay`延迟。
 
 下面这个例子创建了一个 2 秒长的动画，在移动目标到最终位置前会稍微往后退一点：
 
@@ -81,7 +80,7 @@ Animated.timing(this.state.xPosition, {
 }).start();
 ```
 
-Take a look at the [配置动画](animated#配置动画) section of the `Animated` API reference to learn more about all the config parameters supported by the built-in animations.
+如果想了解更多配置参数，请参阅`Animated`文档的[配置动画](animated#配置动画)章节。
 
 ### 组合动画
 
@@ -131,7 +130,7 @@ Animated.spring(a, {
 
 ### 插值
 
-Each property can be run through an interpolation first. An interpolation maps input ranges to output ranges, typically using a linear interpolation but also supports easing functions. By default, it will extrapolate the curve beyond the ranges given, but you can also have it clamp the output value.
+所有动画值都可以执行插值（interpolation）操作。插值是指将一定范围的输入值映射到另一组不同的输出值，一般我们使用线性的映射，但是也可以使用 easing 函数。 By default, it will extrapolate the curve beyond the ranges given, but you can also have it clamp the output value.
 
 A simple mapping to convert a 0-1 range to a 0-100 range would be:
 
@@ -229,20 +228,10 @@ For example, when working with horizontal scrolling gestures, you would do the f
 
 The following example implements a horizontal scrolling carousel where the scroll position indicators are animated using the `Animated.event` used in the `ScrollView`
 
-#### ScrollView with Animated Event Example
+#### 在`ScrollView`中使用动画事件的示例
 
-<div class="toggler">
-  <ul role="tablist" class="toggle-syntax">
-    <li id="functional" class="button-functional" aria-selected="false" role="tab" tabindex="0" aria-controls="functionaltab" onclick="displayTabs('syntax', 'functional')">
-      函数组件示例
-    </li>
-    <li id="classical" class="button-classical" aria-selected="false" role="tab" tabindex="0" aria-controls="classicaltab" onclick="displayTabs('syntax', 'classical')">
-      Class组件示例
-    </li>
-  </ul>
-</div>
-
-<block class="functional syntax" />
+<Tabs groupId="syntax" defaultValue={constants.defaultSyntax} values={constants.syntax}>
+<TabItem value="functional">
 
 ```SnackPlayer name=Animated&supportedPlatforms=ios,android
 import React, { useRef } from "react";
@@ -256,10 +245,14 @@ import {
   Animated,
   useWindowDimensions
 } from "react-native";
+
 const images = new Array(6).fill('https://images.unsplash.com/photo-1556740749-887f6717d7e4');
+
 const App = () => {
   const scrollX = useRef(new Animated.Value(0)).current;
+
   const { width: windowWidth } = useWindowDimensions();
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.scrollContainer}>
@@ -319,6 +312,7 @@ const App = () => {
     </SafeAreaView>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -363,10 +357,12 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   }
 });
+
 export default App;
 ```
 
-<block class="classical syntax" />
+</TabItem>
+<TabItem value="classical">
 
 ```SnackPlayer name=Animated&supportedPlatforms=ios,android
 import React, { Component } from "react";
@@ -380,26 +376,35 @@ import {
   Animated,
   Dimensions
 } from "react-native";
+
 const images = new Array(6).fill('https://images.unsplash.com/photo-1556740749-887f6717d7e4');
+
 const window = Dimensions.get("window");
+
 export default class App extends Component {
   scrollX = new Animated.Value(0);
+
   state = {
     dimensions: {
       window
     }
   };
+
   onDimensionsChange = ({ window }) => {
     this.setState({ dimensions: { window } });
   };
+
   componentDidMount() {
     Dimensions.addEventListener("change", this.onDimensionsChange);
   }
+
   componentWillUnmount() {
     Dimensions.removeEventListener("change", this.onDimensionsChange);
   }
+
   render() {
     const windowWidth = this.state.dimensions.window.width;
+
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.scrollContainer}>
@@ -463,6 +468,7 @@ export default class App extends Component {
     );
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -509,7 +515,8 @@ const styles = StyleSheet.create({
 });
 ```
 
-<block class="endBlock syntax" />
+</TabItem>
+</Tabs>
 
 When using `PanResponder`, you could use the following code to extract the x and y positions from `gestureState.dx` and `gestureState.dy`. We use a `null` in the first position of the array, as we are only interested in the second argument passed to the `PanResponder` handler, which is the `gestureState`.
 
@@ -522,24 +529,15 @@ onPanResponderMove={Animated.event(
 ])}
 ```
 
-#### PanResponder with Animated Event Example
+#### 在`PanResponder`中使用动画事件的示例
 
-<div class="toggler">
-  <ul role="tablist" class="toggle-syntax">
-    <li id="functional" class="button-functional" aria-selected="false" role="tab" tabindex="0" aria-controls="functionaltab" onclick="displayTabs('syntax', 'functional')">
-      函数组件示例
-    </li>
-    <li id="classical" class="button-classical" aria-selected="false" role="tab" tabindex="0" aria-controls="classicaltab" onclick="displayTabs('syntax', 'classical')">
-      Class组件示例
-    </li>
-  </ul>
-</div>
-
-<block class="functional syntax" />
+<Tabs groupId="syntax" defaultValue={constants.defaultSyntax} values={constants.syntax}>
+<TabItem value="functional">
 
 ```SnackPlayer name=Animated
 import React, { useRef } from "react";
 import { Animated, View, StyleSheet, PanResponder, Text } from "react-native";
+
 const App = () => {
   const pan = useRef(new Animated.ValueXY()).current;
   const panResponder = useRef(
@@ -554,6 +552,7 @@ const App = () => {
       }
     })
   ).current;
+
   return (
     <View style={styles.container}>
       <Text style={styles.titleText}>Drag & Release this box!</Text>
@@ -568,6 +567,7 @@ const App = () => {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -586,14 +586,17 @@ const styles = StyleSheet.create({
     borderRadius: 5
   }
 });
+
 export default App;
 ```
 
-<block class="classical syntax" />
+</TabItem>
+<TabItem value="classical">
 
 ```SnackPlayer name=Animated
 import React, { Component } from "react";
 import { Animated, View, StyleSheet, PanResponder, Text } from "react-native";
+
 export default class App extends Component {
   pan = new Animated.ValueXY();
   panResponder = PanResponder.create({
@@ -606,6 +609,7 @@ export default class App extends Component {
       Animated.spring(this.pan, { toValue: { x: 0, y: 0 } }).start();
     }
   });
+
   render() {
     return (
       <View style={styles.container}>
@@ -622,6 +626,7 @@ export default class App extends Component {
     );
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -642,7 +647,8 @@ const styles = StyleSheet.create({
 });
 ```
 
-<block class="endBlock syntax" />
+</TabItem>
+</Tabs>
 
 ### 响应当前的动画值
 
@@ -669,7 +675,7 @@ Animated.timing(this.state.animatedValue, {
 
 动画值在不同的驱动方式之间是不能兼容的。因此如果你在某个动画中启用了原生驱动，那么所有和此动画依赖相同动画值的其他动画也必须启用原生驱动。
 
-原生驱动还可以在`Animated.event`中使用。 This is specially useful for animations that follow the scroll position as without the native driver, the animation will always run a frame behind the gesture due to the async nature of React Native.
+原生驱动还可以在`Animated.event`中使用，其对于滚动操作相关的动画优势更突出。在滚动事件中如果不使用原生驱动，由于数值需要通过 js 桥异步传输，动画将始终比用户的操作落后一帧。
 
 ```jsx
 <Animated.ScrollView // <-- 使用可动画化的ScrollView组件
@@ -688,7 +694,7 @@ Animated.timing(this.state.animatedValue, {
 </Animated.ScrollView>
 ```
 
-You can see the native driver in action by running the [RNTester app](https://github.com/facebook/react-native/blob/master/RNTester/), then loading the Native Animated Example. You can also take a look at the [source code](https://github.com/facebook/react-native/blob/master/RNTester/js/examples/NativeAnimation/NativeAnimationsExample.js) to learn how these examples were produced.
+You can see the native driver in action by running the [RNTester app](https://github.com/facebook/react-native/blob/master/packages/rn-tester/), then loading the Native Animated Example. You can also take a look at the [source code](https://github.com/facebook/react-native/blob/master/packages/rn-tester/js/examples/NativeAnimation/NativeAnimationsExample.js) to learn how these examples were produced.
 
 #### 注意事项
 
@@ -716,8 +722,8 @@ While using transform styles such as `rotateY`, `rotateX`, and others ensure the
 
 The RNTester app has various examples of `Animated` in use:
 
-- [AnimatedGratuitousApp](https://github.com/facebook/react-native/tree/master/RNTester/js/examples/Animated/AnimatedGratuitousApp)
-- [NativeAnimationsExample](https://github.com/facebook/react-native/blob/master/RNTester/js/examples/NativeAnimation/NativeAnimationsExample.js)
+- [AnimatedGratuitousApp](https://github.com/facebook/react-native/tree/master/packages/rn-tester/js/examples/Animated/AnimatedGratuitousApp)
+- [NativeAnimationsExample](https://github.com/facebook/react-native/blob/master/packages/rn-tester/js/examples/NativeAnimation/NativeAnimationsExample.js)
 
 ## `LayoutAnimation` API
 
@@ -814,3 +820,7 @@ This example uses a preset value, you can customize the animations as you need, 
 如果我们要更新的组件有一个非常深的内嵌结构，并且没有使用`shouldComponentUpdate`来优化，那么使用`setNativeProps`就将大有裨益。
 
 如果你发现你的动画丢帧（低于 60 帧每秒），可以尝试使用`setNativeProps`或者`shouldComponentUpdate`来优化它们。Or you could run the animations on the UI thread rather than the JavaScript thread [with the useNativeDriver option](http://facebook.github.io/react-native/blog/2017/02/14/using-native-driver-for-animated.html). 你还可以考虑将部分计算工作放在动画完成之后进行，这时可以使用[InteractionManager](interactionmanager)。你还可以使用应用内的开发者菜单中的“FPS Monitor”工具来监控应用的帧率。
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(94.28%), [sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(5.72%)

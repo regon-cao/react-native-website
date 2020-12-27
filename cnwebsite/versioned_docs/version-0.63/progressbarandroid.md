@@ -1,10 +1,7 @@
 ---
-id: version-0.63-progressbarandroid
+id: progressbarandroid
 title: 🚧 ProgressBarAndroid
-original_id: progressbarandroid
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 > **已过时。** Use [@react-native-community/progress-bar-android](https://github.com/react-native-community/progress-bar-android) instead.
 
@@ -128,3 +125,7 @@ export default App;
 | 类型   | 必填 |
 | ------ | ---- |
 | string | 否   |
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

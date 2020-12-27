@@ -1,10 +1,9 @@
 ---
-id: version-0.63-panresponder
+id: panresponder
 title: PanResponder
-original_id: panresponder
 ---
 
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
+import Tabs from '@theme/Tabs'; import TabItem from '@theme/TabItem'; import constants from '@site/core/TabsConstants';
 
 `PanResponder`类可以将多点触摸操作协调成一个手势。它使得一个单点触摸可以接受更多的触摸操作，也可以用于识别简单的多点触摸手势。
 
@@ -86,22 +85,12 @@ onPanResponderMove: (event, gestureState) => {}
   },
 ```
 
-## Example
+## 示例
 
 `PanResponder` works with `Animated` API to help build complex gestures in the UI. The following example contains an animated `View` component which can be dragged freely across the screen
 
-<div class="toggler">
-  <ul role="tablist" class="toggle-syntax">
-    <li id="functional" class="button-functional" aria-selected="false" role="tab" tabindex="0" aria-controls="functionaltab" onclick="displayTabs('syntax', 'functional')">
-      函数组件示例
-    </li>
-    <li id="classical" class="button-classical" aria-selected="false" role="tab" tabindex="0" aria-controls="classicaltab" onclick="displayTabs('syntax', 'classical')">
-      Class组件示例
-    </li>
-  </ul>
-</div>
-
-<block class="functional syntax" />
+<Tabs groupId="syntax" defaultValue={constants.defaultSyntax} values={constants.syntax}>
+<TabItem value="functional">
 
 ```SnackPlayer name=PanResponder
 import React, { useRef } from "react";
@@ -168,7 +157,8 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-<block class="classical syntax" />
+</TabItem>
+<TabItem value="classical">
 
 ```SnackPlayer name=PanResponder
 import React, { Component } from "react";
@@ -232,9 +222,10 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-<block class="endBlock syntax" />
+</TabItem>
+</Tabs>
 
-还可以看看[官方示例 RNTester 中的 PanResponder](https://github.com/facebook/react-native/blob/master/RNTester/js/examples/PanResponder/PanResponderExample.js).
+还可以看看[官方示例 RNTester 中的 PanResponder](https://github.com/facebook/react-native/blob/master/packages/rn-tester/js/examples/PanResponder/PanResponderExample.js).
 
 ---
 
@@ -267,3 +258,7 @@ static create(config)
 通常来说，对那些有对应捕获事件的事件来说，我们在捕获阶段更新 gestureState 一次，然后在冒泡阶段直接使用即可。
 
 注意 onStartShould\* 回调。他们只会在此节点冒泡/捕获的开始/结束事件中提供已经更新过的`gestureState`。一旦这个节点成为了事件的响应者，则所有的开始/结束事件都会被手势正确处理，并且`gestureState`也会被正确更新。(numberActiveTouches)有可能没有包含所有的触摸点，除非你就是触摸事件的响应者。
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(96.15%), [sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(3.85%)

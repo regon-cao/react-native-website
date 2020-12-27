@@ -1,10 +1,7 @@
 ---
-id: version-0.63-checkbox
+id: checkbox
 title: 🚧 CheckBox
-original_id: checkbox
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 > **已过时。** Use [@react-native-community/checkbox](https://github.com/react-native-community/react-native-checkbox) instead.
 
@@ -108,3 +105,7 @@ The value of the checkbox. If true the checkbox will be turned on. Default value
 | 类型 | 必填 |
 | ---- | ---- |
 | bool | 否   |
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

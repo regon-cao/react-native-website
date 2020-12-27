@@ -1,10 +1,7 @@
 ---
-id: version-0.63-timepickerandroid
+id: timepickerandroid
 title: 🚧 TimePickerAndroid
-original_id: timepickerandroid
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 > **已过时。** Use [@react-native-community/datetimepicker](https://github.com/react-native-community/react-native-datetimepicker) instead.
 
@@ -72,3 +69,7 @@ static dismissedAction()
 ```
 
 对话框被取消。
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

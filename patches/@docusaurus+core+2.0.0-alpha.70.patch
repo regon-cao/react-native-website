@@ -1,0 +1,35 @@
+diff --git a/node_modules/@docusaurus/core/lib/webpack/base.js b/node_modules/@docusaurus/core/lib/webpack/base.js
+index 567ed59..7a35670 100644
+--- a/node_modules/@docusaurus/core/lib/webpack/base.js
++++ b/node_modules/@docusaurus/core/lib/webpack/base.js
+@@ -42,6 +42,8 @@ function getDocusaurusAliases() {
+     return aliases;
+ }
+ exports.getDocusaurusAliases = getDocusaurusAliases;
++const cdnUrl =
++  '//cdn.jsdelivr.net/gh/reactnativecn/react-native-website@gh-pages/';
+ function createBaseConfig(props, isServer, minify = true) {
+     const { outDir, siteDir, baseUrl, generatedFilesDir, routesPaths } = props;
+     const totalPages = routesPaths.length;
+@@ -58,7 +60,7 @@ function createBaseConfig(props, isServer, minify = true) {
+             path: outDir,
+             filename: isProd ? '[name].[contenthash:8].js' : '[name].js',
+             chunkFilename: isProd ? '[name].[contenthash:8].js' : '[name].js',
+-            publicPath: baseUrl,
++            publicPath: isProd ? cdnUrl : baseUrl,
+         },
+         // Don't throw warning when asset created is over 250kb
+         performance: {
+diff --git a/node_modules/@docusaurus/core/lib/webpack/client.js b/node_modules/@docusaurus/core/lib/webpack/client.js
+index cdd914f..fa9ae08 100644
+--- a/node_modules/@docusaurus/core/lib/webpack/client.js
++++ b/node_modules/@docusaurus/core/lib/webpack/client.js
+@@ -30,7 +30,7 @@ function createClientConfig(props, minify = true) {
+         optimization: {
+             // Keep the runtime chunk separated to enable long term caching
+             // https://twitter.com/wSokra/status/969679223278505985
+-            runtimeChunk: true,
++            // runtimeChunk: true,
+         },
+         plugins: [
+             new ChunkAssetPlugin_1.default(),

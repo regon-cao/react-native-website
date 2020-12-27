@@ -1,10 +1,7 @@
 ---
-id: version-0.63-inputaccessoryview
+id: inputaccessoryview
 title: InputAccessoryView
-original_id: inputaccessoryview
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 A component which enables customization of the keyboard input accessory view on iOS. The input accessory view is displayed above the keyboard whenever a `TextInput` has focus. This component can be used to create custom toolbars.
 
@@ -80,3 +77,7 @@ An ID which is used to associate this `InputAccessoryView` to specified TextInpu
 
 - [react-native#18997](https://github.com/facebook/react-native/issues/18997): 不支持多行的`TextInput`
 - [react-native#20157](https://github.com/facebook/react-native/issues/20157): 不能和底部 tab 栏一起使用
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(79.75%), [sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(20.25%)

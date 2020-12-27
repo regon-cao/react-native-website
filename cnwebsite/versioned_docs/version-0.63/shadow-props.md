@@ -1,10 +1,7 @@
 ---
-id: version-0.63-shadow-props
+id: shadow-props
 title: 阴影样式属性
-original_id: shadow-props
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 ```SnackPlayer name=Shadow%20Props&supportedPlatforms=ios
 import React, { useState } from "react";
@@ -143,3 +140,7 @@ These properties are iOS only - for similar functionality on Android, use the [`
 | 类型   | 必填 | 平台 |
 | ------ | ---- | ---- |
 | number | 否   | iOS  |
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

@@ -1,10 +1,7 @@
 ---
-id: version-0.63-javascript-environment
-title: JavaScript环境
-original_id: javascript-environment
+id: javascript-environment
+title: JavaScript 环境
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 ## JavaScript 运行时环境
 
@@ -91,3 +88,7 @@ ES8
 其他特性
 
 - `__DEV__` 用于判断当前是否开发环境的全局变量
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(97.78%), [zhangning7](https://github.com/search?q=zhangning7&type=Users)(1.11%), [sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(1.11%)

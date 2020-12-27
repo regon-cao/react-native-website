@@ -1,10 +1,7 @@
 ---
-id: version-0.63-pushnotificationios
+id: pushnotificationios
 title: 🚧 PushNotificationIOS
-original_id: pushnotificationios
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 > **已过时。** Use [@react-native-community/push-notification-ios](https://github.com/react-native-community/react-native-push-notification-ios) instead.
 
@@ -297,7 +294,7 @@ Attaches a listener to remote or local notification events while the app is runn
 
 | 名称    | 类型     | 必填 | 说明        |
 | ------- | -------- | ---- | ----------- |
-| type    | string   | 是   | Event type. |
+| 类型    | string   | 是   | Event type. |
 | handler | function | 是   | Listener.   |
 
 Valid events are:
@@ -321,7 +318,7 @@ Removes the event listener. Do this in `componentWillUnmount` to prevent memory 
 
 | 名称    | 类型     | 必填 | 说明        |
 | ------- | -------- | ---- | ----------- |
-| type    | string   | 是   | Event type. |
+| 类型    | string   | 是   | Event type. |
 | handler | function | 是   | Listener.   |
 
 ---
@@ -495,3 +492,7 @@ getThreadID();
 ```
 
 Gets the thread ID on the notification
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(97.17%), [sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(2.83%)

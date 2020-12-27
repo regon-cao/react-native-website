@@ -1,10 +1,7 @@
 ---
-id: version-0.63-imageeditor
+id: imageeditor
 title: 🚧 ImageEditor
-original_id: imageeditor
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 > **已过时。** 请使用[@react-native-community/image-editor](https://github.com/react-native-community/react-native-image-editor)代替。
 
@@ -34,6 +31,10 @@ cropData = {
   offset: { x: number, y: number },
   size: { width: number, height: number },
   displaySize: { width: number, height: number },
-  resizeMode: 'contain/cover/stretch'
+  resizeMode: "contain/cover/stretch",
 };
 ```
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

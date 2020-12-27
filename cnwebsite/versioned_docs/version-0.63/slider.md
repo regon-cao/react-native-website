@@ -1,10 +1,7 @@
 ---
-id: version-0.63-slider
+id: slider
 title: 🚧 Slider
-original_id: slider
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 > **已过时。** Use [@react-native-community/slider](https://github.com/react-native-community/react-native-slider) instead.
 
@@ -175,3 +172,7 @@ Color of the foreground switch grip.
 | 类型                   | 必填 | 平台 |
 | ---------------------- | ---- | ---- |
 | Image.propTypes.source | 否   | iOS  |
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

@@ -1,10 +1,7 @@
 ---
-id: version-0.63-view-style-props
-title: View样式属性
-original_id: view-style-props
+id: view-style-props
+title: View 样式属性
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(99.62%), [yahoo.007](https://github.com/search?q=yahoo.007%40163.com&type=Users)(0.38%)
 
 ### 示例
 
@@ -262,3 +259,7 @@ export default ViewStyleProps;
 | 类型   | 必填 | 平台    |
 | ------ | ---- | ------- |
 | number | 否   | Android |
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(99.23%), [yahoo.007](https://github.com/search?q=yahoo.007&type=Users)(0.38%), [sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(0.38%)

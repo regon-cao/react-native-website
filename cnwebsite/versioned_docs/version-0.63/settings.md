@@ -1,10 +1,7 @@
 ---
-id: version-0.63-settings
+id: settings
 title: Settings
-original_id: settings
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 `Settings`是对[`NSUserDefaults`](https://developer.apple.com/documentation/foundation/nsuserdefaults)的封装。它是 iOS 平台上的一种持久的键值对存储。
 
@@ -96,3 +93,7 @@ static watchKeys(keys: string | array<string>, callback: function): number
 Subscribe to be notified when the value for any of the keys specified by the `keys` parameter has been changed in `NSUserDefaults`. Returns a `watchId` number that may be used with `clearWatch()` to unsubscribe.
 
 > **Note:** `watchKeys()` by design ignores internal `set()` calls and fires callback only on changes preformed outside of React Native code.
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

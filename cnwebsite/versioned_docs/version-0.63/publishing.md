@@ -1,10 +1,7 @@
 ---
-id: version-0.63-publishing-forks
+id: publishing-forks
 title: 发布自己定制的ReactNative包
-original_id: publishing-forks
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 ## TL;DR
 
@@ -83,3 +80,7 @@ Now you can use this branch as a git dependency in your app project, by pointing
 ```
 
 No other modifications to your dependencies should be necessary for your native changes to be included in your project.
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)

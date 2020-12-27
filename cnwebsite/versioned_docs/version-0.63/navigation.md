@@ -1,10 +1,7 @@
 ---
-id: version-0.63-navigation
+id: navigation
 title: 使用导航器跳转页面
-original_id: navigation
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(93.75%), [noclip](https://github.com/search?q=noclip%40foxmail.com&type=Users)(6.25%)
 
 移动应用基本不会只由一个页面组成。管理多个页面的呈现、跳转的组件就是我们通常所说的导航器（navigator）。
 
@@ -17,3 +14,5 @@ original_id: navigation
 社区今后主推的方案是一个单独的导航库`react-navigation`，它的使用十分简单。React Navigation 中的视图是原生组件，同时用到了运行在原生线程上的`Animated`动画库，因而性能表现十分流畅。此外其动画形式和手势都非常便于定制。
 
 要想详细了解 React Navigation 的具体用法，请访问其[官方网站](https://reactnavigation.org/)，网站右上角有中文翻译，但内容可能会有所滞后。
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(93.75%), [noclip](https://github.com/search?q=noclip&type=Users)(6.25%)

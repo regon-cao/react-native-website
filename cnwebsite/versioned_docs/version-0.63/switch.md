@@ -1,10 +1,7 @@
 ---
-id: version-0.63-switch
+id: switch
 title: Switch
-original_id: switch
 ---
-
-##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
 
 跨平台通用的“开关”组件。
 
@@ -133,3 +130,7 @@ On iOS, custom color for the background. This background color can be seen eithe
 | 类型 | 必填 |
 | ---- | ---- |
 | bool | 否   |
+
+---
+
+##### 本文档贡献者：[sunnylqm](https://github.com/search?q=sunnylqm&type=Users)(100.00%)
